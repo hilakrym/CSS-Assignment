@@ -1,0 +1,268 @@
+/* Color Palette - Pearl, Rose, and Gold */
+:root {
+    --pearl-bg: #FDFBF7;
+    --rose-accent: #C0A0A0;
+    --gold-accent: #C5A059;
+    --text-dark: #2C3539;
+    --card-bg: #FFFFFF;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background-color: var(--pearl-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--pearl-bg), #F4EBEB);
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 3px solid var(--gold-accent);
+}
+
+#main-name {
+    font-size: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    color: var(--rose-accent);
+    font-weight: 300;
+}
+
+/* Custom Horizontal Rule */
+.custom-divider {
+    border: none;
+    border-top: 4px dotted var(--gold-accent);
+    width: 10%;
+    margin: 40px auto;
+}
+
+/* Base Flexbox Settings */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--gold-accent);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Skills List */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list li {
+    background-color: var(--rose-accent);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+}
+
+/* Projects Grid (Flexbox) */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid #EAEAEA;
+    border-top: 4px solid var(--rose-accent);
+    border-radius: 8px;
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 20px rgba(197, 160, 89, 0.2);
+}
+
+
+/* Images */
+.project-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain; /* <-- כאן שינינו מ-cover ל-contain */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #FFFFFF; /* הוספתי רקע לבן כדי שישתלב יפה עם הלוגואים */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--text-dark);
+    color: var(--pearl-bg);
+    margin-top: 40px;
+}
+
+.highlight {
+    color: var(--gold-accent);
+    font-weight: bold;
+}
+/* ========================================= */
+/* עיצוב אייקונים פרסנול סקילס */
+/* ========================================= */
+
+#personal-skills {
+    padding-top: 40px;
+}
+
+.personal-skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* עיצוב נקי עם מסגרת עדינה */
+.personal-skill-item {
+    background: transparent;
+    border: 1px solid var(--rose-accent);
+    border-radius: 8px;
+    width: 220px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+/* כשמרחפים מעל היכולת האישית צבע הזהב נדלק  ויש צל */
+.personal-skill-item:hover {
+    border-color: var(--gold-accent);
+    background-color: var(--card-bg);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.15);
+}
+
+/* ריבוע לאייקון - גודל וצבע */
+.icon-container {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    color: var(--text-dark);
+    transition: color 0.4s ease;
+}
+
+/* צבע האייקון משתנה לזהב בריחוף */
+.personal-skill-item:hover .icon-container {
+    color: var(--gold-accent);
+}
+
+.personal-skill-item h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* ========================================= */
+/* אנימציות פרסונל סקיל */
+/* ========================================= */
+
+/*  שחייה: תנועת גלים רכה  */
+.swimming:hover .wave-1 { animation: waveFlow 2s linear infinite; }
+.swimming:hover .wave-2 { animation: waveFlow 2s linear infinite reverse; }
+.swimming:hover .swimmer-arm { animation: swimStroke 1.5s ease-in-out infinite; }
+
+@keyframes waveFlow {
+    0% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    100% { transform: translateX(-2px); }
+}
+@keyframes swimStroke {
+    0%, 100% { transform: rotate(0deg); transform-origin: top left; }
+    50% { transform: rotate(-15deg); }
+}
+
+/*  צלילה: המסכה מרחפת במים ובועות עולות */
+.diving:hover .mask, .diving:hover .mask-divider { animation: gentleFloat 3s ease-in-out infinite; }
+.diving:hover .bubble { animation: elegantBubble 2s ease-in infinite; }
+.diving:hover .b2 { animation-delay: 1s; }
+
+@keyframes gentleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+@keyframes elegantBubble {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-12px); opacity: 0; }
+}
+
+/*  קדרות: הכלי מתרחב ומתכווץ קלות */
+.pottery:hover .vase { animation: clayMold 2s ease-in-out infinite; }
+.pottery:hover .spin-line { animation: spinDetail 0.6s linear infinite; }
+
+@keyframes clayMold {
+    0%, 100% { transform: scaleX(1); transform-origin: center bottom; }
+    50% { transform: scaleX(1.08); }
+}
+@keyframes spinDetail {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+    .personal-skills-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #main-name {
+        font-size: 2.5rem;
+    }
+    
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+}
